@@ -1,0 +1,61 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  @include flex-col-center;
+  width: 100%;
+  padding: 68px 15px;
+
+  .title {
+    @include h1;
+    line-height: 140%;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .subtitle {
+    @include h4-sb;
+    text-align: center;
+    color: $gray;
+    margin-top: 20px;
+    max-width: 90%;
+  }
+
+  .marked {
+    background: linear-gradient(101deg, #8802F9 11.07%, #F90273 155.08%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .container {
+    .title {
+      max-width: calc(50%);
+    }
+
+    .subtitle {
+      max-width: calc(45%);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    .title {
+      max-width: calc(60%);
+    }
+
+    .subtitle {
+      max-width: calc(55%);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+}

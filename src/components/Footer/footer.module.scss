@@ -1,0 +1,62 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  @include flex-col-center;
+  height: 280px;
+  background-color: $secondary;
+  padding: 38px;
+  color: white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .logoWrap {
+    @include flex-row-center;
+    margin-bottom: 20px;
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin-right: 10px;
+    }
+
+    .title {
+      @include h1;
+    }
+  }
+
+  .supportWrap {
+    @include flex-row-center;
+
+    .mailIcon {
+      width: 24px;
+      height: 24px;
+      fill: white;
+      margin-right: 5px;
+    }
+
+    .link {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 16px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .socialWrap {
+    @include flex-row-center;
+    margin: 16px;
+
+    .socialIcon {
+      fill: white;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

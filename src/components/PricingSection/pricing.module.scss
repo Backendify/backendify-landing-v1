@@ -1,0 +1,117 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  width: 100%;
+  padding: 28px;
+  margin-top: 100px;
+
+  .cardsContainer {
+    @include flex-row-center;
+    height: 400px;
+    margin-top: 140px;
+
+    .card {
+      @include flex-col-start;
+      height: 100%;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+      margin-right: 60px;
+      transition: all 0.4s ease;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: $gray;
+        margin-top: 10px;
+      }
+
+      .price {
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: $secondary;
+        margin-top: 18px;
+
+        span {
+          font-weight: 800;
+          font-size: 36px;
+        }
+      }
+
+      .hr {
+        width: 100%;
+        border: 2px solid #DFDFDF;
+        border-radius: 1px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .option {
+        @include flex-row-start;
+        width: 100%;
+        margin: 5px 10px;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          color: $gray;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin-top: 60px;
+
+    .cardsContainer {
+      @include flex-col-center;
+      height: auto;
+      margin-top: 60px;
+
+      .card {
+        padding: 10px;
+        margin-top: 60px;
+        margin-right: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .title {
+          font-size: 20px;
+        }
+
+        .subtitle {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  width: 100%;
+  height: 820px;
+  background-image: url(../../assets/blobs/wave.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 28px 200px;
+  margin-top: 150px;
+  left: 0;
+  right: 0;
+
+  .workflow {
+    @include flex-row-center;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    #arrow1 {
+      margin-top: 50px;
+    }
+
+    #arrow2 {
+      margin-top: -20px;
+      transform: scaleY(-1);
+    }
+
+    .card {
+      @include flex-col-center;
+
+      .numBlock {
+        @include flex-col-center;
+        width: 100px;
+        height: 100px;
+        background: $quaternary;
+        border-radius: 22px;
+        color: white;
+        font-weight: 700;
+        font-size: 48px;
+      }
+
+      .text {
+        @include h4-sb;
+        color: white;
+        width: 180px;
+        margin-top: 28px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 28px 0px;
+    height: auto;
+    margin-top: 100px;
+    background-image: none;
+    background: $secondary;
+
+    .workflow {
+      @include flex-col-center;
+      margin-top: 60px;
+
+      #arrow1, #arrow2 {
+        display: none;
+      }
+
+      .card {
+        margin-right: 0;
+        margin-top: 60px;
+
+        .numBlock {
+          width: 90px;
+          height: 90px;
+          font-style: 40px;
+        }
+      }
+    }
+  }
+}

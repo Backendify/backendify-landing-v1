@@ -1,0 +1,51 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  @include flex-col-center;
+  width: 100%;
+  margin-top: 180px;
+  margin-bottom: 280px;
+  padding: 20px;
+
+  .text {
+    @include h4-md;
+    text-align: center;
+    color: $gray;
+    margin-top: 28px;
+    width: 40%;
+  }
+
+  .inputContainer {
+    width: 40%;
+    margin-top: 80px;
+  }
+
+  .appreciation {
+    @include h4-sb;
+    text-align: center;
+    margin-top: 20px;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    .text {
+      width: 80%;
+      font-size: 20px;
+    }
+
+    .inputContainer {
+      width: 80%;
+    }
+
+    .appreciation {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+}
