@@ -18,13 +18,13 @@ const PricingSection: FC = () => (
       <PriceCard
         title="Startup"
         subtitle="For Small teams or office"
-        price="25"
+        price="50"
         aviableFeautures={['pro auth module', 'database module', 'email module', 'notifications module', 'media db module', 'integrations module']}
       />
       <PriceCard
         title="Enterprise"
         subtitle="For Small teams or office"
-        price="100"
+        price="200"
         aviableFeautures={['templates', 'payments module', 'email module', 'notifications module']}
       />
     </div>

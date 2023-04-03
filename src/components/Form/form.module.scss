@@ -1,0 +1,75 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.form {
+  @include flex-col-center;
+  width: 100%;
+  padding: 10px;
+  background: white;
+  box-shadow: 4px 0 20px #00000020;
+  border-radius: 12px;
+
+  .errorMsg {
+    @include flex-row-center;
+    width: 100%;
+    color: red;
+    font-size: 16px;
+  }
+
+  .inputWrap {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .fieldWrap {
+      width: 100%;
+      height: 50px;
+      background: $input-bg;
+      border-radius: 12px;
+      padding: 16px;
+      transition: border 0.1s ease;
+
+      .field {
+        width: 100%;
+        background: $input-bg;
+        font-weight: 500;
+        font-size: 20px;
+        color: $black;
+        border: none;
+        outline: none;
+        vertical-align: middle;
+
+        &::placeholder {
+          font-weight: 500;
+          font-size: 20px;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  .button {
+    @include flex-col-center;
+    width: 100%;
+    height: 50px;
+    background: $secondary;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    &:hover {
+      background: $secondary-hover
+    }
+
+    &:disabled {
+      background: #C8C8C8;
+      color: #8A8A8A;
+    }
+  }
+}
