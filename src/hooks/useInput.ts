@@ -17,7 +17,7 @@ const useInput = (initialValue: string): UseInputRes => {
   const onChange = (e: any) => setValue(e.target.value)
 
   useEffect(() => {
-    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value) ? setError('') : setError('The field must be email')
+    /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value) ? setError('') : setError('The field must be email')
   }, [value])
 
   const onBlur = (e: any) => setDirty(true)
