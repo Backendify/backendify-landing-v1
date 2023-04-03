@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import styles from './home.module.scss'
+import { Link } from 'react-scroll'
 
 const HomeSection: FC = () => (
   <section className={styles.container} id="home">
@@ -13,6 +14,7 @@ const HomeSection: FC = () => (
       up a server, installing required packages, and programming APIs - with
       Backendify, you can create a backend that's ready to use.
     </p>
+    <Link to="subscription" smooth={true} duration={350} offset={-100} className={styles.button}>join us today!</Link>
   </section>
 )
 

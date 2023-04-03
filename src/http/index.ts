@@ -6,11 +6,19 @@ type Res = {
 
 const URL = process.env.REACT_APP_SHEET_CONNECTION_ID || ''
 
-const addRow = async (value: string): Promise<Res> => {
+interface IData {
+  email: string;
+  firstName: string;
+  company: string;
+}
+
+const addRow = async (data: IData): Promise<Res> => {
   return await axios.post(
     URL,
     {
-      "Email": value
+      "Email": data.email,
+      "Name": data.firstName,
+      "Company": data.company
     }
   )
 }

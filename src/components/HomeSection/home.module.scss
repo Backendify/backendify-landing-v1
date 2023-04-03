@@ -28,6 +28,17 @@
     background-clip: text;
     text-fill-color: transparent;
   }
+
+  .button {
+    @include h4-sb;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    padding: 10px 40px;
+    background: $secondary;
+    border-radius: 100px;
+    text-decoration: none;
+  }
 }
 
 @media screen and (min-width: 1380px) {
