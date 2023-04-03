@@ -19,7 +19,7 @@ const Input: FC<Props> = ({ setSend }: Props) => {
           setReqErr('')
           setSend(true)
         })
-        .catch(err => setReqErr('An error occured. Try later'))
+        .catch(err => setReqErr('Something went wrong!'))
         .finally(() => {
           clear()
           const timeout = setTimeout(() => {

@@ -12,7 +12,7 @@ const Footer: FC = () => (
     </div>
     <div className={styles.supportWrap}>
       <Mail className={styles.mailIcon} />
-      <a href="mailto:support@backendify.com" className={styles.link}>support@backendify.com</a>
+      <a href="mailto:info@backendify.com" className={styles.link}>info@backendify.com</a>
     </div>
     <div className={styles.socialWrap}>
       <a href="https://www.facebook.com/profile.php?id=100091474542420" >
